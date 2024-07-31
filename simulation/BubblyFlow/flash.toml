@@ -35,9 +35,9 @@
   gr_amrexMG_composite_solve = true
   gr_amrexMG_Tol = 1e-13
   gr_amrexMG_max_iter = 200
-  nblockx = 15
-  nblocky = 15
-  nblockz = 15
+  nblockx = 20
+  nblocky = 20
+  nblockz = 20
   nrefs = 10000
   lrefine_min = 1
   lrefine_max = 1
@@ -56,7 +56,7 @@
   ins_cfl = 0.1
   ins_sigma = 0.1
   ins_pressureCorrect = false
-  ins_intSchm = 1 # Euler explicit
+  ins_intSchm = 2 # AB2
   ins_advSchm = 105 # WENO5
   ins_invReynolds = 0.00256
   ins_gravY = -2.0
@@ -64,7 +64,7 @@
   ins_dpdy = -2.0 # alpha*rho_gas*grav + (1-alpha)*rho_liq*grav, alpha = Nb*pi*d^3/(6*L^3)
 
 [Multiphase]
-  mph_lsIt = 2
+  mph_lsIt = 3
   mph_rhoGas = 0.001
   mph_muGas = 0.01
   mph_iPropSmear = 2.0
