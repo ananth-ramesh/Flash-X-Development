@@ -2,10 +2,6 @@
 # "Assessing passive scalar dynamics in bubble-induced turbulence using direct numerical simulations"
 # Authors: Hidman .et.al J. Fluid Mech. (2023), vol. 962, A32, doi:10.1017/jfm.2023.307
 
-# Notes: gravity, surface tension and the pressure gradient driver are scaled from 3D to 2D 
-# by a factor of 2. When running 3D simulations, scale it based on the numbers provided in 
-# the paper.
-
 [Simulation]
   sim_numBubbles = 14
   sim_lengthScaleMeters = 0.0025
@@ -35,9 +31,9 @@
   gr_amrexMG_composite_solve = true
   gr_amrexMG_Tol = 1e-13
   gr_amrexMG_max_iter = 200
-  nblockx = 20
-  nblocky = 20
-  nblockz = 20
+  nblockx = 15
+  nblocky = 15
+  nblockz = 15
   nrefs = 10000
   lrefine_min = 1
   lrefine_max = 1
@@ -59,16 +55,18 @@
   ins_intSchm = 2 # AB2
   ins_advSchm = 105 # WENO5
   ins_invReynolds = 0.00256
-  ins_gravY = -2.0
+  ins_gravY = -1.0
   ins_dtSpec = 3.125e-6
-  ins_dpdy = -2.0 # alpha*rho_gas*grav + (1-alpha)*rho_liq*grav, alpha = Nb*pi*d^3/(6*L^3)
+  ins_dpdy = -1.5 # alpha*rho_gas*grav + (1-alpha)*rho_liq*grav, alpha = Nb*pi*d^3/(6*L^3)
 
 [Multiphase]
   mph_lsIt = 3
   mph_rhoGas = 0.001
   mph_muGas = 0.01
   mph_iPropSmear = 2.0
-  mph_invWeber = 2.0
+  mph_invWeber = 1.2
+  mph_presTol = 0.1
+  mph_smoothCurv = true
 
 [IO]
   basenm = "INS_Bubbly_Flow_"
@@ -85,4 +83,4 @@
   plot_var_4 = "dfun"
   plot_var_5 = "visc"
   plot_var_6 = "rhoc"
-  plot_var_7 = "dust"
+  plot_var_7 = "curv"
