@@ -99,7 +99,6 @@
   mph_CpGas = 0.735
   mph_presTol = 0.01
   mph_tempTol = 0.01
-  mph_smoothCurv = true
 
 [Outlet]
   out_buffer = 1.0

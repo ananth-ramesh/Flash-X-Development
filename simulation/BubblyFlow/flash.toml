@@ -66,7 +66,6 @@
   mph_iPropSmear = 2.0
   mph_invWeber = 1.2
   mph_presTol = 0.1
-  mph_smoothCurv = true
 
 [IO]
   basenm = "INS_Bubbly_Flow_"
