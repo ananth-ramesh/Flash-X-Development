@@ -74,9 +74,8 @@
   mph_CpGas = 0.83
   mph_Stefan = 0.5298
   mph_Tsat = 0.15
-  mph_presTol = 0.1
+  mph_presTol = 0.01
   mph_tempTol = 0.01
-  mph_smoothCurv = true
 
 [HeatAD]
   ht_Prandtl = 8.4
