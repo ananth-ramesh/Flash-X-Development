@@ -14,7 +14,7 @@ mph_invWeber = 0.0002
 out_buffer = 0.5
 
 sim_jetAmp = 0.1
-sim_jetFreq = 9 # (18D/3U)*(pi/5)*(U/D)
+sim_jetFreq = 5 # (18D/3U)*(pi/5)*(U/D)
 
 geometry = "cartesian"
 xmin = -3
@@ -51,11 +51,13 @@ plot_var_3 = "vely"
 plot_var_4 = "velz"
 plot_var_5 = "dfun"
 plot_var_6 = "dust"
+plot_var_7 = "curv"
+plot_var_8 = "rhoc"
 
 checkpointFileIntervalTime = 1.0
-checkpointFileIntervalStep = 500000
+checkpointFileIntervalStep = 0
 plotFileIntervalTime = 0.1
-plotFileIntervalStep = 100000
+plotFileIntervalStep = 0
 checkpointFileNumber = 0
 rolling_checkpoint = 2
 plotFileNumber = 0
@@ -66,9 +68,9 @@ nblockz = 3
 nrefs = 100
 
 lrefine_min = 1
-lrefine_max = 4
-derefine_cutoff_1 = -0.2
-refine_cutoff_1 = 0.2
+lrefine_max = 5
+derefine_cutoff_1 = -0.05
+refine_cutoff_1 = 0.05
 refine_var_1 = "dfun"
 refine_var_count = 1
 flux_correct = .true.

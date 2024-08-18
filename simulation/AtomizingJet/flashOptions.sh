@@ -2,5 +2,5 @@
 
 FlashSha="adhruv/incomp-flux-corr"
 
-FlashOptions="incompFlow/AtomizingJet -auto -maxblocks=130 \
+FlashOptions="incompFlow/AtomizingJet -auto -maxblocks=200 \
               -2d -nxb=16 -nyb=16 +amrex +nolwf +serialIO -site=$SiteHome +incomp"
