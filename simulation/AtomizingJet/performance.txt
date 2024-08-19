@@ -1,0 +1,5 @@
+Configuration: Pure MPI
+Dimension: 3D
+Wall time: 16 hours
+Processes: 10 MPI processor AMD Ryzen 9 CPU
+Blocks: Started with 600 blocks ended with 2800 blocks
