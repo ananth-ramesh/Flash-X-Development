@@ -46,8 +46,6 @@
   lrefine_max = 4
   flux_correct = true
   amrexFaceInterpolator = "face_div_free"
-  derefine_cutoff_1 = -0.1
-  refine_cutoff_1 = 0.1
   refine_var_1 = "dfun"
   refine_var_count = 1
 

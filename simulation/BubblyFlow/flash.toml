@@ -37,6 +37,10 @@
   nrefs = 10000
   lrefine_min = 1
   lrefine_max = 1
+  flux_correct = true
+  amrexFaceInterpolator = "face_div_free"
+  refine_var_1 = "dfun"
+  refine_var_count = 1
 
 [Driver]
   tstep_change_factor = 1.01

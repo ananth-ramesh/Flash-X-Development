@@ -2,5 +2,5 @@
 
 FlashSha="adhruv/incomp-flux-corr"
 
-FlashOptions="incompFlow/PoolBoiling -auto -maxblocks=100 -2d -nxb=16 -nyb=16 \
+FlashOptions="incompFlow/PoolBoiling -auto -maxblocks=400 -2d -nxb=8 -nyb=8 \
               +amrex +nolwf +serialIO -site=$SiteHome +incomp -tomlfile=$JobWorkDir/job.input"
