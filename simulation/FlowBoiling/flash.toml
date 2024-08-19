@@ -38,13 +38,18 @@
   gr_amrexMG_composite_solve = true
   gr_amrexMG_Tol = 1.0e-13
   gr_amrexMG_max_iter = 200
-  nblockx = 20
-  nblocky = 5
-  nrefs = 10000000
-  lrefine_min = 1
-  lrefine_max = 1
-  flux_correct = true
+  nblockx = 16
+  nblocky = 4
   enableMaskedGCFill = true
+  nrefs = 50
+  lrefine_min = 1
+  lrefine_max = 4
+  flux_correct = true
+  amrexFaceInterpolator = "face_div_free"
+  derefine_cutoff_1 = -0.1
+  refine_cutoff_1 = 0.1
+  refine_var_1 = "dfun"
+  refine_var_count = 1
 
 [IncompNS]
   ins_invReynolds = 0.0042
