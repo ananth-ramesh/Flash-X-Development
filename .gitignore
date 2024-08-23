@@ -18,6 +18,8 @@ software/flashx/Flash-X
 software/flashkit/FlashKit
 software/hdf5/HDF5
 software/hypre/HYPRE
+software/ann/ANN
 boxmem
 *jobnode.archive*
 !software/flashx
+!software/hdf5

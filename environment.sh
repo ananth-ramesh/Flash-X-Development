@@ -28,6 +28,11 @@ export AMREX3D_HOME="$PROJECT_HOME/software/amrex/AMReX/install-$SiteName/3D"
 # Path to Flash-X
 export FLASHX_HOME="$PROJECT_HOME/software/flashx/Flash-X"
 
+# Store path to ANN
+export ANN_HOME="$PROJECT_HOME/software/ann/ANN"
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$ANN_HOME/lib"
+export LIBRARY_PATH="$LD_LIBRARY_PATH"
+
 # Store path to Hypre
 export HYPRE_HOME="$PROJECT_HOME/software/hypre/HYPRE/install-$SiteName"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$HYPRE_HOME/lib"
@@ -46,5 +51,6 @@ echo "AMREX2D_HOME=$AMREX2D_HOME"
 echo "AMREX3D_HOME=$AMREX3D_HOME"
 echo "HYPRE_PATH=$HYPRE_PATH"
 echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH"
+echo "ANN_HOME=$ANN_HOME"
 echo "PATH=$PATH"
 echo "---------------------------------------------------------------------------------------"
