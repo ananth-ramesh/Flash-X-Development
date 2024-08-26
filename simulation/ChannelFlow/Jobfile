@@ -11,13 +11,20 @@ job:
     - calResources.sh
     - flashRun.sh
   archive:
-    - flash.par
     - amrex.pc
-    - "INS*"
+    - "flashx_hdf5_*"
+    - "flashx_forced*"
+    - "*.log"
+    - "unitTest*"
     - "*.out"
+    - "*.log" 
   clean:
     - flashx
-    - "*hdf5*"
+    - flash.dat
+    - "flashx_hdf5_*"
+    - "flashx_forced*"
     - "*.log"
-    - slurm*
+    - "unitTest*"
+    - "*.out"
+    - "*.log"
     - amrex.pc
