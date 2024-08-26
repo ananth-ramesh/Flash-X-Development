@@ -21,5 +21,6 @@ software/hypre/HYPRE
 software/ann/ANN
 boxmem
 *jobnode.archive*
+!*hdf5_ibd*
 !software/flashx
 !software/hdf5
