@@ -42,8 +42,8 @@ restart         = .false.
 nend            = 10000000
 tmax            = 100. 
 ins_cflFlg      = 1
-ins_cfl         = 0.05
-ins_sigma	= 0.05
+ins_cfl         = 0.1
+ins_sigma	= 0.1
 ins_dtSpec      = 1.0d-2
 dtinit          = 1.0d-2
 tstep_change_factor = 1.01
@@ -59,7 +59,7 @@ plot_var_6      = "omgm"
   
 checkpointFileIntervalTime = 0.
 checkpointFileIntervalStep = 0
-plotFileIntervalTime = 1.
+plotFileIntervalTime = 0.2
 plotFileIntervalStep = 0
 
 # AMR parameters
@@ -70,9 +70,6 @@ nrefs   = 1000
 
 lrefine_min       = 1
 lrefine_max       = 5
-refine_var_1 = "lmda"
-refine_var_2 = "omgm"
-refine_var_count = 2
 flux_correct = .true.
 amrexFaceInterpolator = "face_div_free"
 
