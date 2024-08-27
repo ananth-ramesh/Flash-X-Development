@@ -78,7 +78,7 @@ nblocky	= 2
 nblockz = 2
 nrefs   = 1000
 lrefine_min       = 1
-lrefine_max       = 5
+lrefine_max       = 6
 flux_correct = .true.
 amrexFaceInterpolator = "face_div_free"
 

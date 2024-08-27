@@ -2,7 +2,7 @@
 enableMaskedGCFill = .TRUE.
 
 # Inverse of Reynolds Number
-ins_invReynolds      = .0002
+ins_invReynolds      = .002
 
 # Subgrid Scale model flag (0 no sgs model, 1 sgs model)
 ins_isgs            = 0
@@ -12,22 +12,22 @@ geometry	= "cartesian"
 
 # Immersed boundary parameters
 ib_numBodies = 1
-ib_bodyName = "rae2882"
+ib_bodyName = "circle"
 ib_bruteForceMapping = .true.
 
 # Size of computational volume
 xmin		= -2
-xmax		=  5
-ymin		= -1.0
-ymax		=  1.0
+xmax		=  12
+ymin		= -2.0
+ymax		=  2.0
 zmin            =  0.0
-zmax            =  1.0
+zmax            =  2.0
 
 # Size of refinement box
-sim_xMinRef = -0.6
-sim_xMaxRef =  3.0
-sim_yMinRef = -0.3
-sim_yMaxRef =  0.3
+sim_xMinRef = -0.7
+sim_xMaxRef =  5.0
+sim_yMinRef = -0.7
+sim_yMaxRef =  0.7
 sim_zMinRef =  0.0
 sim_zMaxRef =  1.0
 
@@ -48,8 +48,8 @@ restart         = .false.
 nend            = 10000000
 tmax            = 100. 
 ins_cflFlg      = 1
-ins_cfl         = 0.1
-ins_sigma	= 0.1
+ins_cfl         = 0.3
+ins_sigma	= 0.2
 ins_dtSpec      = 1.0d-2
 dtinit          = 1.0d-2
 tstep_change_factor = 1.01
@@ -75,7 +75,7 @@ ignoreForcedPlot = .true.
 # AMR parameters
 nblockx	= 7
 nblocky	= 2
-nblockz = 2
+nblockz = 1
 nrefs   = 1000
 lrefine_min       = 1
 lrefine_max       = 5
