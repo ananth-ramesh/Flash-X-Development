@@ -62,6 +62,9 @@ plot_var_3      = "vely"
 plot_var_4      = "dust"
 plot_var_5      = "lmda"
 plot_var_6      = "omgm"
+plot_var_7      = "lcrv"
+plot_var_8      = "nmlx"
+plot_var_9      = "nmly"
   
 checkpointFileIntervalTime = 5.
 checkpointFileIntervalStep = 0
