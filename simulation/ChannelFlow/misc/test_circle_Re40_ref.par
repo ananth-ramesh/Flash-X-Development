@@ -1,0 +1,97 @@
+# Runtime parameters for the Channel Flow problem.
+enableMaskedGCFill = .TRUE.
+
+# Inverse of Reynolds Number
+ins_invReynolds      = .025
+
+# Subgrid Scale model flag (0 no sgs model, 1 sgs model)
+ins_isgs            = 0
+
+# Grid dimensionality and geometry
+geometry	= "cartesian"
+
+# Immersed boundary parameters
+ib_numBodies = 1
+ib_bodyName = "circle"
+ib_bruteForceMapping = .true.
+
+# Size of computational volume
+xmin		= -5.
+xmax		=  15.
+ymin		= -5.
+ymax		=  5
+zmin            =  0.0
+zmax            =  1.0
+
+# Size of refinement box
+sim_xMinRef = -0.7
+sim_xMaxRef =  3.0
+sim_yMinRef = -0.7
+sim_yMaxRef =  0.7
+sim_zMinRef =  0.0
+sim_zMaxRef =  1.0
+
+# Outlet parameters
+out_buffer = 1.0
+
+# Boundary conditions
+xl_boundary_type = "inflow_ins"
+xr_boundary_type = "outflow_ins"
+yl_boundary_type = "slip_ins"
+yr_boundary_type = "slip_ins"
+zl_boundary_type = "slip_ins"
+zr_boundary_type = "slip_ins"
+
+# Simulation (grid, time, I/O) parameters
+run_comment	= "2D Channel Flow problem"
+restart         = .false.
+nend            = 10000000
+tmax            = 100. 
+ins_cflFlg      = 1
+ins_cfl         = 0.1
+ins_sigma	= 0.1
+ins_dtSpec      = 1.0d-2
+dtinit          = 1.0d-2
+tstep_change_factor = 1.01
+#ins_pressureCorrect= .true.
+ins_intSchm = 2
+
+plot_var_1	= "pres"
+plot_var_2      = "velx"
+plot_var_3      = "vely"
+plot_var_4      = "dust"
+plot_var_5      = "lmda"
+plot_var_6      = "omgm"
+plot_var_7      = "lcrv"
+plot_var_8      = "nmlx"
+plot_var_9      = "nmly"
+  
+checkpointFileIntervalTime = 5.
+checkpointFileIntervalStep = 0
+plotFileIntervalTime = 1.
+plotFileIntervalStep = 0
+rolling_checkpoint = 2
+checkpointFileNumber = 0
+plotFileNumber = 0
+ignoreForcedPlot = .true.
+
+# AMR parameters
+nblockx	= 10
+nblocky	= 5
+nblockz = 1
+
+nrefs   = 100000
+lrefine_min       = 1
+lrefine_max       = 5
+
+refine_var_1 = "lmda"
+refine_var_2 = "omgm"
+refine_var_count = 2
+
+flux_correct = .true.
+amrexFaceInterpolator = "face_div_free"
+
+# AMReX Poisson Solver Parameters
+gr_amrexMG_composite_solve = .true.
+gr_amrexMG_Tol = 1e-13
+gr_amrexMG_max_iter = 200
