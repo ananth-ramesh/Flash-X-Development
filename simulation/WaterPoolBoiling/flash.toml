@@ -3,7 +3,7 @@
   htr_heaterName = "pool_boiling"
   htr_numHeaters = 1
   htr_nucSeedRadius = 0.15
-  
+
 [Heater.0001]
   dim = 1
   xmin = -2.0
@@ -47,7 +47,7 @@
 
 [Grid]
   geometry = "cartesian"
-  xmin = -2.0
+  xmin = 0.0
   xmax = 2.0
   ymin = 0.0
   ymax = 6.0
@@ -60,10 +60,10 @@
   zl_boundary_type = "slip_ins"
   zr_boundary_type = "noslip_ins"
   gr_amrexMG_composite_solve = true
-  gr_amrexMG_Tol = 1e-12
+  gr_amrexMG_Tol = 1e-13
   gr_amrexMG_max_iter = 200
-  nblockx = 8
-  nblocky = 12
+  nblockx = 1
+  nblocky = 3
   nrefs = 50
   lrefine_min = 1
   lrefine_max = 4
@@ -75,22 +75,22 @@
 [Driver]
   restart = false
   wall_clock_time_limit = 7000
-  dtinit = 0.5e-6
-  dtmax = 0.5e-6
+  dtinit = 1.0e-5
+  dtmax = 1.0e-5
   tstep_change_factor = 1.0
   nend = 10000000
-  tmax = 100
+  tmax = 300
 
 [IncompNS]
   ins_cflFlg = 0
-  ins_cfl = 0.0001
-  ins_sigma = 0.0001
+  ins_cfl = 0.05
+  ins_sigma = 0.05
   ins_pressureCorrect = false
   ins_intSchm = 2
   ins_advSchm = 105
   ins_invReynolds = 0.00075
   ins_gravY = -1.0
-  ins_dtSpec = 1.0e-4
+  ins_dtSpec = 1.0e-5
 
 [Multiphase]
   mph_lsIt = 2

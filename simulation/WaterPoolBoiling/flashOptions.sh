@@ -2,5 +2,5 @@
 
 FlashSha="adhruv/development"
 
-FlashOptions="incompFlow/PoolBoiling -auto -maxblocks=400 -2d -nxb=8 -nyb=8 \
+FlashOptions="incompFlow/PoolBoiling -auto -maxblocks=50 -2d -nxb=16 -nyb=16 \
               +amrex +nolwf +serialIO -site=$SiteHome +incomp -tomlfile=$JobWorkDir/job.input --with-unitmods"
