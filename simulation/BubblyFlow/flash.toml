@@ -3,12 +3,12 @@
 # Authors: Hidman .et.al J. Fluid Mech. (2023), vol. 962, A32, doi:10.1017/jfm.2023.307
 
 [Simulation]
-  sim_numBubbles = 14
+  sim_numBubbles = 40
   sim_lengthScaleMeters = 0.0025
   sim_timeScaleSeconds = 0.016
 
 [Simulation.bubble_dist]
-  ndim = 2
+  ndim = 3
 
 [Logfile]
   run_comment = "Bubbly Flow problem"
@@ -16,12 +16,12 @@
 
 [Grid]
   geometry = "cartesian"
-  xmin = -5.0
-  xmax =  5.0
-  ymin = -5.0
-  ymax =  5.0
-  zmin = -5.0
-  zmax =  5.0
+  xmin = -2.0
+  xmax =  2.0
+  ymin = -2.0
+  ymax =  2.0
+  zmin = -2.0
+  zmax =  2.0
   xl_boundary_type = "periodic"
   xr_boundary_type = "periodic"
   yl_boundary_type = "periodic"
@@ -31,9 +31,9 @@
   gr_amrexMG_composite_solve = true
   gr_amrexMG_Tol = 1e-13
   gr_amrexMG_max_iter = 200
-  nblockx = 15
-  nblocky = 15
-  nblockz = 15
+  nblockx = 32
+  nblocky = 32
+  nblockz = 32
   nrefs = 10000
   lrefine_min = 1
   lrefine_max = 1
@@ -44,11 +44,11 @@
 
 [Driver]
   tstep_change_factor = 1.01
-  nend = 10000000
+  nend = 100
   tmax = 15
-  dtinit = 3.125e-6
-  dtmin = 3.125e-6
-  dtmax = 3.125e-5
+  dtinit = 1e-6
+  dtmin = 1e-6
+  dtmax = 1e-5
   restart = false
 
 [IncompNS]
@@ -58,9 +58,9 @@
   ins_pressureCorrect = false
   ins_intSchm = 2 # AB2
   ins_advSchm = 105 # WENO5
-  ins_invReynolds = 0.00256
-  ins_gravY = -1.0
-  ins_dtSpec = 3.125e-6
+  ins_invReynolds = 0.00256 # Reynolds number equal to Galilei number when Froude number is 1
+  ins_gravY = -1.0 # Froude number
+  ins_dtSpec = 1e-6
   ins_dpdy = -1.5 # alpha*rho_gas*grav + (1-alpha)*rho_liq*grav, alpha = Nb*pi*d^3/(6*L^3)
 
 [Multiphase]
@@ -68,7 +68,7 @@
   mph_rhoGas = 0.001
   mph_muGas = 0.01
   mph_iPropSmear = 2.0
-  mph_invWeber = 1.2
+  mph_invWeber = 1.2 # Weber number and Etovos number are equal when Froude number is 1
   mph_presTol = 0.01
 
 [IO]

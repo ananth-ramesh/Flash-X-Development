@@ -2,5 +2,5 @@
 
 FlashSha="adhruv/development"
 
-FlashOptions="incompFlow/BubblyFlow -auto -maxblocks=400 -2d -nxb=16 -nyb=16 \
-              +amrex +parallelIO +nolwf -site=$SiteHome +incomp -tomlfile=$JobWorkDir/job.input --with-unitmods"
+FlashOptions="incompFlow/BubblyFlow -auto -maxblocks=1024 -3d -nxb=32 -nyb=32 -nzb=32 \
+              +amrex +nolwf -site=$SiteHome +incomp -tomlfile=$JobWorkDir/job.input --with-unitmods"
