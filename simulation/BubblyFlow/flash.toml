@@ -16,12 +16,12 @@
 
 [Grid]
   geometry = "cartesian"
-  xmin = -2.0
-  xmax =  2.0
-  ymin = -2.0
-  ymax =  2.0
-  zmin = -2.0
-  zmax =  2.0
+  xmin = -5.0
+  xmax =  5.0
+  ymin = -5.0
+  ymax =  5.0
+  zmin = -5.0
+  zmax =  5.0
   xl_boundary_type = "periodic"
   xr_boundary_type = "periodic"
   yl_boundary_type = "periodic"
@@ -29,7 +29,7 @@
   zl_boundary_type = "periodic"
   zr_boundary_type = "periodic"
   gr_amrexMG_composite_solve = true
-  gr_amrexMG_Tol = 1e-13
+  gr_amrexMG_Tol = 1e-12
   gr_amrexMG_max_iter = 200
   nblockx = 32
   nblocky = 32
