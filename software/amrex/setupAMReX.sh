@@ -14,11 +14,11 @@ fi
 # configure and install amrex in 2D
 make clean || true
 ./configure --dim=2 --prefix=$AMREX2D_HOME
-make
-make install
+make -j CC=mpicc CXX=mpicxx FC=mpif90 F90=mpif90
+make install CC=mpicc CXX=mpicxx FC=mpif90 F90=mpif90
 
 # configure and install amrex in 3D
 make clean || true
 ./configure --dim=3 --prefix=$AMREX3D_HOME
-make
-make install
+make -j CC=mpicc CXX=mpicxx FC=mpif90 F90=mpif90
+make install CC=mpicc CXX=mpicxx FC=mpif90 F90=mpif90
